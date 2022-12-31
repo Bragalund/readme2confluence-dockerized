@@ -1,15 +1,15 @@
----
-labels:  
-    - generated_page
-    - md2cf
----
-
 # POC Markdown2Confluence
 
-Project for deploying Markdown, aka your readme-file, to Confluence.  
+Are you tired of updating confluence, after updating the readme in your project?  
+Or are you forced to write documentation in confluence, but want to write it in the readme-file in the project?  
+
+Lets automate that...  
+
+This is a project for deploying Markdown, aka your readme-file, to Confluence.  
 It can be done from your local machine with Make, shell-script or 
 from a pipeline in Gitlab. 
 
+This makes it possible to automaticly update confluence in your CI/CD-pipeline after you have updated documentation in your Readme, saving that stupid copy-pasting-step if your business needs you to update confluence.  
 
 ## How to use?  
 
@@ -19,7 +19,7 @@ TOKEN=xxxxxxxxxxxxxxx make confluence
 
 ## How to migrate to other projects with Makefile?  
 
-1. Copy-paste the confluence-step __confluence__ in the [Makefile](Makefile)  
+1. Copy-paste the confluence-step __confluence__ in the [Makefile](Examples/Makefile)  
 2. Replace the variables:  
 - PAGEID 
 - REPO_BASEURL_TO_COMMIT
