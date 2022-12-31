@@ -1,0 +1,9 @@
+ARG VERSION=3.9
+
+FROM python:${VERSION}
+
+RUN pip install md2cf
+COPY ./md2cf_command.sh .
+RUN chmod +x ./md2cf_command.sh
+
+CMD python --version && pip --version

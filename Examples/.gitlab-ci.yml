@@ -1,0 +1,6 @@
+update_confluence_with_readme:
+  image: bragalund/md2cf:1.0.0
+  variables:
+    MD2F_COMMAND: 'md2cf --host "https://YOUR.CONFLUENCE-URL-HERE.com/rest/api" --insecure --token "wMjgxMTgwOi2l-YOUR-TOKEN-HERE-qoBVcOEdzV0bww8v" --space XYZ --page-id "2659942" README.md'
+  script:
+    - 'eval "$MD2F_COMMAND"'

@@ -1,0 +1,9 @@
+FROM python:3.9
+
+RUN pip install md2cf
+
+COPY ./README.md .
+COPY / .
+
+ENTRYPOINT ["md2cf"]
+CMD ["--host", "https://YOUR.CONFLUENCE.com/rest/api", "--insecure", "--token", "INSERT_YOUR_PERSONAL_CONFLUENCE_TOKEN_HERE", "--space", "XYZ", "--page-id", "265977942", "README.md"]
